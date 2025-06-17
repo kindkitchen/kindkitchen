@@ -1,2 +1,4 @@
-#### When I will not know what to do
-- Challenge own skills by writing Deno KV adapter for **[BETTER-AUTH](https://www.better-auth.com/docs/guides/create-a-db-adapter)**
+
+- `Hey, me! If you thinking how to spend free-hobby-coding time`
+  - `Challenge own skills by writing Deno KV adapter for better-auth`
+    - [https://www.better-auth.com/docs/guides/create-a-db-adapter](https://www.better-auth.com/docs/guides/create-a-db-adapter)
