@@ -23,6 +23,13 @@ fmt:
     just format_all_justfiles
 
 [script('bash')]
+install:
+    trap 'kill 0' SIGINT
+    just site just install &
+    just cv just install &
+    wait
+
+[script('bash')]
 site *args="":
     cd {{ ROOT }}
     cd app/site
