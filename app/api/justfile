@@ -19,5 +19,7 @@ build_static:
     just cv npm run build &
     wait
     cd {{ ROOT }}
+    rm -fr app/api/static/site
+    rm -fr app/api/static/cv
     mv app/site/build app/api/static/site
     mv app/cv/dist app/api/static/cv
