@@ -28,3 +28,18 @@ site *args="":
     cd app/site
     OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
     {{ if args == "" { "$OPEN_FOLDER_IN_EDITOR ." } else { args } }}
+
+
+[script('bash')]
+cv *args="":
+    cd {{ ROOT }}
+    cd app/cv
+    OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
+    {{ if args == "" { "$OPEN_FOLDER_IN_EDITOR ." } else { args } }}
+
+[script('bash')]
+api *args="":
+    cd {{ ROOT }}
+    cd app/api
+    OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
+    {{ if args == "" { "$OPEN_FOLDER_IN_EDITOR ." } else { args } }}

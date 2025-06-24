@@ -9,4 +9,4 @@ home:
     $OPEN_FOLDER_IN_EDITOR .
 
 install:
-    yarn
+    pnpm i
