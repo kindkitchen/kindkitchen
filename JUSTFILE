@@ -23,8 +23,8 @@ fmt:
     just format_all_justfiles
 
 [script('bash')]
-api *args="":
+site *args="":
     cd {{ ROOT }}
-    cd app/api
+    cd app/site
     OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
     {{ if args == "" { "$OPEN_FOLDER_IN_EDITOR ." } else { args } }}
