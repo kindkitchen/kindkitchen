@@ -29,7 +29,6 @@ site *args="":
     OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
     {{ if args == "" { "$OPEN_FOLDER_IN_EDITOR ." } else { args } }}
 
-
 [script('bash')]
 cv *args="":
     cd {{ ROOT }}

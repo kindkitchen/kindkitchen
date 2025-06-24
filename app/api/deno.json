@@ -1,6 +1,5 @@
 {
   "workspace": [
-    "domain",
     "lib/config",
     "lib/util"
   ],

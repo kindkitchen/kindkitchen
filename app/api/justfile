@@ -2,8 +2,22 @@ import '../../JUSTFILE'
 
 ROOT := `cd ../.. && pwd`
 
+_:
+    just --fmt
+    just --list
+
 [script('bash')]
 home:
     cd {{ ROOT }}
     OPEN_FOLDER_IN_EDITOR="{{ OPEN_FOLDER_IN_EDITOR }}"
     $OPEN_FOLDER_IN_EDITOR .
+
+[script('bash')]
+build_static:
+    trap 'kill 0' SIGINT;
+    just site npm run build &
+    just cv npm run build &
+    wait
+    cd {{ ROOT }}
+    mv app/site/build app/api/static/site
+    mv app/cv/dist app/api/static/cv
