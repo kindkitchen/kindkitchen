@@ -24,3 +24,9 @@ jobs:
         with:
           vars_obj: ${{ toJson(vars) }}
           secrets_obj: ${{ toJson(secrets) }}
+      - run: just api just build_static
+      - uses: denoland/deployctl@v1
+        with:
+          project: ${{ vars.DENO_PROJECT_API }}
+          entrypoint: main.ts
+          root: app/api
