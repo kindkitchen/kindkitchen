@@ -1,0 +1,8 @@
+{
+  "workspace": [
+    "domain",
+    "lib/config",
+    "lib/util"
+  ],
+  "version": "0.3.0"
+}

@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: Repository environment
+        type: environment
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.env }}
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: extractions/setup-just@v3
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: canary
+      - uses: actions/setup-node@v4
+      - uses: kindkitchen/genv@v1.0.0
+        with:
+          vars_obj: ${{ toJson(vars) }}
+          secrets_obj: ${{ toJson(secrets) }}
