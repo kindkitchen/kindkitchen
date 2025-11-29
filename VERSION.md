@@ -24,3 +24,65 @@ app/lib/member.
 ---
 
 - new task - `just format_all_justfiles`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ids]
+
+*
+
+[main]
+capslock = overload(nav, esc)
+leftshift+rightshift = capslock
+[nav]
+h = left
+j = down
+k = up
+l = right
+] = macro(C-tab)
+[ = macro(C-S-tab)
+enter = macro(C-r)
+space = overload(extra, noop)
+
+[extra]
+h = home
+j = pagedown
+k = pageup
+l = end
+
+6 = :
+4 = ;
+c = ,
+d = .
+s = /
+1 = v
+2 = b
